@@ -1,8 +1,11 @@
-# Hi, I'm Ldemon 👋
+**Hi, I'm Ldemon** 👋
 Interested in LLM-related infrastructure and RL infrastructure.
-# Currently focusing on
+
+**Currently focusing on**
 agent-lightning@Maintainer：The absolute trainer to light up AI agents.
-# Where to find me
+
+
+**Where to find me**
 email: 2798457545@qq.com
 wechat：15968165921
 
