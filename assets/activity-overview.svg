@@ -19,17 +19,17 @@
   <rect class="panel" x="1" y="1" width="718" height="428" rx="12"/>
   <line class="axis" x1="360" y1="68" x2="360" y2="362"/>
   <line class="axis" x1="213" y1="215" x2="507" y2="215"/>
-  <polygon class="shape" points="360,207 370.24,215 360,223.96 251.2,215"/>
+  <polygon class="shape" points="360,207 368.96,215 360,225.24 252.48000000000002,215"/>
   <circle class="point" cx="360" cy="207" r="5"/>
-  <circle class="point" cx="370.24" cy="215" r="5"/>
-  <circle class="point" cx="360" cy="223.96" r="5"/>
-  <circle class="point" cx="251.2" cy="215" r="5"/>
-  <text class="percent" x="360" y="35" text-anchor="middle">0%</text>
+  <circle class="point" cx="368.96" cy="215" r="5"/>
+  <circle class="point" cx="360" cy="225.24" r="5"/>
+  <circle class="point" cx="252.48000000000002" cy="215" r="5"/>
+  <text class="percent" x="360" y="35" text-anchor="middle">1%</text>
   <text class="label" x="360" y="57" text-anchor="middle">Code reviews</text>
-  <text class="percent" x="535" y="207" text-anchor="start">8%</text>
+  <text class="percent" x="535" y="207" text-anchor="start">7%</text>
   <text class="label" x="535" y="229" text-anchor="start">Issues</text>
-  <text class="percent" x="360" y="392" text-anchor="middle">7%</text>
+  <text class="percent" x="360" y="392" text-anchor="middle">8%</text>
   <text class="label" x="360" y="414" text-anchor="middle">Pull requests</text>
-  <text class="percent" x="185" y="207" text-anchor="end">85%</text>
+  <text class="percent" x="185" y="207" text-anchor="end">84%</text>
   <text class="label" x="185" y="229" text-anchor="end">Commits</text>
 </svg>
