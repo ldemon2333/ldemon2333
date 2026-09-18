@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" role="img" aria-labelledby="title desc">
+  <title id="title">Ldemon cyberpunk terminal</title>
+  <desc id="desc">A neon terminal introducing Ldemon as a distributed systems and AI agent builder.</desc>
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00f5d4"/>
+      <stop offset="0.52" stop-color="#7b61ff"/>
+      <stop offset="1" stop-color="#ff2e88"/>
+    </linearGradient>
+    <radialGradient id="screen" cx="50%" cy="0%" r="110%">
+      <stop offset="0" stop-color="#151333"/>
+      <stop offset="1" stop-color="#050816"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#7b61ff" stroke-width="0.45" opacity="0.22"/>
+    </pattern>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="window"><rect x="5" y="5" width="890" height="320" rx="18"/></clipPath>
+  </defs>
+
+  <rect x="2" y="2" width="896" height="326" rx="21" fill="url(#frame)"/>
+  <rect x="5" y="5" width="890" height="320" rx="18" fill="url(#screen)"/>
+  <g clip-path="url(#window)">
+    <rect x="5" y="48" width="890" height="277" fill="url(#grid)"/>
+    <path d="M5 48H895" stroke="#7b61ff" opacity="0.75"/>
+    <path d="M680 325L895 110V325Z" fill="#ff2e88" opacity="0.035"/>
+    <path d="M5 240L197 48H5Z" fill="#00f5d4" opacity="0.035"/>
+  </g>
+
+  <circle cx="29" cy="27" r="6" fill="#ff2e88"/>
+  <circle cx="49" cy="27" r="6" fill="#ffd166"/>
+  <circle cx="69" cy="27" r="6" fill="#00f5d4"/>
+  <text x="450" y="32" text-anchor="middle" fill="#8189a9" font-family="monospace" font-size="13">ldemon@github — zsh — 90×24</text>
+
+  <g font-family="monospace">
+    <text x="38" y="91" fill="#00f5d4" font-size="16" filter="url(#glow)">ldemon@github</text>
+    <text x="171" y="91" fill="#8189a9" font-size="16">:</text>
+    <text x="184" y="91" fill="#7b61ff" font-size="16">~</text>
+    <text x="200" y="91" fill="#f7f7ff" font-size="16">$ ./boot-profile</text>
+
+    <text x="38" y="145" fill="#f7f7ff" font-size="36" font-weight="700" letter-spacing="2" filter="url(#glow)">HELLO, I AM LDEMON.</text>
+    <text x="38" y="181" fill="#b8c1ec" font-size="17">I build and dissect systems for</text>
+    <text x="344" y="181" fill="#ff2e88" font-size="17" font-weight="700">AI agents</text>
+    <text x="436" y="181" fill="#b8c1ec" font-size="17">and</text>
+    <text x="477" y="181" fill="#00f5d4" font-size="17" font-weight="700">distributed RL.</text>
+
+    <text x="38" y="227" fill="#8189a9" font-size="14">[01]</text>
+    <text x="82" y="227" fill="#f7f7ff" font-size="14">TRAINING × INFERENCE</text>
+    <text x="332" y="227" fill="#8189a9" font-size="14">[02]</text>
+    <text x="376" y="227" fill="#f7f7ff" font-size="14">AGENT RUNTIMES</text>
+    <text x="587" y="227" fill="#8189a9" font-size="14">[03]</text>
+    <text x="631" y="227" fill="#f7f7ff" font-size="14">PYTORCH INTERNALS</text>
+
+    <text x="38" y="282" fill="#00f5d4" font-size="16">system.status</text>
+    <text x="168" y="282" fill="#8189a9" font-size="16">=</text>
+    <text x="188" y="282" fill="#ff2e88" font-size="16">"CURIOUS // BUILDING // ONLINE"</text>
+    <rect x="516" y="266" width="10" height="19" fill="#00f5d4" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;1;0;0;1" dur="1.15s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
