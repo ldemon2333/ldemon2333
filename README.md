@@ -13,9 +13,3 @@
 - _email_: 2798457545@qq.com
 
 - _wechat_: 15968165921
-
-### Play with me
-
-[![Play Snake](https://img.shields.io/badge/Play_Snake-59f3a7?style=for-the-badge&logo=googlegames&logoColor=06140e)](https://ldemon2333.github.io/ldemon2333/assets/snake-game.html)
-
-Play online with arrow keys or WASD. Every food block makes the snake one block longer, and your high score is saved locally.
