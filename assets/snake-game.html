@@ -137,6 +137,7 @@
       </div>
       <div class="stats">
         <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+        <div class="stat"><span>Length</span><strong id="length">3</strong></div>
         <div class="stat"><span>Best</span><strong id="best">0</strong></div>
       </div>
     </header>
@@ -168,6 +169,7 @@
     const canvas = document.querySelector('#board');
     const ctx = canvas.getContext('2d');
     const scoreEl = document.querySelector('#score');
+    const lengthEl = document.querySelector('#length');
     const bestEl = document.querySelector('#best');
     const overlay = document.querySelector('#overlay');
     const message = document.querySelector('#message');
@@ -198,6 +200,7 @@
       nextDirection = direction;
       score = 0;
       scoreEl.textContent = score;
+      lengthEl.textContent = snake.length;
       food = spawnFood();
       paused = false;
       pauseButton.textContent = 'Pause';
@@ -228,11 +231,15 @@
       if (hitWall || hitSelf) return gameOver();
 
       snake.unshift(head);
-      if (head.x === food.x && head.y === food.y) {
+      const ateFood = head.x === food.x && head.y === food.y;
+      if (ateFood) {
+        // Keep the previous tail so the snake grows by exactly one block.
         score += 10;
         scoreEl.textContent = score;
+        lengthEl.textContent = snake.length;
         food = spawnFood();
       } else {
+        // Normal movement removes the tail and preserves the current length.
         snake.pop();
       }
       draw();
@@ -250,9 +257,7 @@
       ctx.shadowBlur = 18;
       ctx.shadowColor = '#ff6685';
       ctx.fillStyle = '#ff6685';
-      ctx.beginPath();
-      ctx.arc(food.x * size + size / 2, food.y * size + size / 2, size * 0.3, 0, Math.PI * 2);
-      ctx.fill();
+      roundRect(food.x * size + 5, food.y * size + 5, size - 10, size - 10, 5);
 
       snake.forEach((part, index) => {
         const gradient = ctx.createLinearGradient(part.x * size, part.y * size, (part.x + 1) * size, (part.y + 1) * size);
