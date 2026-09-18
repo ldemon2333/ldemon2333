@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Retro Space Battle</title>
+  <desc id="desc">A looping 1990s arcade-style space battle animation with a player ship firing at enemy fighters.</desc>
+
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05051a"/>
+      <stop offset="0.58" stop-color="#101044"/>
+      <stop offset="1" stop-color="#32145c"/>
+    </linearGradient>
+    <linearGradient id="playerBody" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#00eaff"/>
+      <stop offset="0.5" stop-color="#ecffff"/>
+      <stop offset="1" stop-color="#4b72ff"/>
+    </linearGradient>
+    <linearGradient id="enemyBody" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#ffec5c"/>
+      <stop offset="0.45" stop-color="#ff3864"/>
+      <stop offset="1" stop-color="#8b1cff"/>
+    </linearGradient>
+    <radialGradient id="blast">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.28" stop-color="#fff45b"/>
+      <stop offset="0.6" stop-color="#ff542e"/>
+      <stop offset="1" stop-color="#ff168f" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cyanGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="hotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#fff" opacity="0.018"/>
+      <rect y="2" width="4" height="2" fill="#000" opacity="0.09"/>
+    </pattern>
+    <clipPath id="screen"><rect x="8" y="8" width="884" height="344" rx="12"/></clipPath>
+
+    <g id="starSmall" fill="#fff"><circle r="1"/></g>
+    <g id="starBig" fill="#a9eaff" filter="url(#cyanGlow)"><path d="M0-4 1-1 4 0 1 1 0 4-1 1-4 0-1-1Z"/></g>
+
+    <g id="enemy">
+      <path d="M0-17 13-5 25 0 13 6 8 16 0 10-8 16-13 6-25 0-13-5Z" fill="url(#enemyBody)" stroke="#ffd3ec" stroke-width="1.5"/>
+      <path d="M-13 2 0-8 13 2 0 8Z" fill="#25075c"/>
+      <circle r="4" fill="#fffc77" filter="url(#hotGlow)"/>
+    </g>
+
+    <g id="player">
+      <path d="M0-28 15-7 37 11 13 9 7 25 0 16-7 25-13 9-37 11-15-7Z" fill="url(#playerBody)" stroke="#c9fbff" stroke-width="2"/>
+      <path d="M0-18 9 7 0 13-9 7Z" fill="#183d9f"/>
+      <path d="M-8 22 0 42 8 22 0 16Z" fill="#ffef5a" filter="url(#hotGlow)"/>
+      <path d="M-4 23 0 34 4 23 0 18Z" fill="#fff"/>
+    </g>
+  </defs>
+
+  <g clip-path="url(#screen)">
+    <rect width="900" height="360" fill="url(#space)"/>
+    <circle cx="730" cy="75" r="88" fill="#612374" opacity="0.22"/>
+    <circle cx="730" cy="75" r="58" fill="#fd52a7" opacity="0.08"/>
+    <path d="M0 295 Q170 255 330 302T650 295T920 285V360H0Z" fill="#07071e" opacity="0.7"/>
+
+    <g opacity="0.75">
+      <g>
+        <use href="#starSmall" x="55" y="20"/><use href="#starSmall" x="184" y="85"/><use href="#starSmall" x="298" y="33"/>
+        <use href="#starSmall" x="415" y="118"/><use href="#starSmall" x="536" y="45"/><use href="#starSmall" x="662" y="140"/>
+        <use href="#starSmall" x="785" y="29"/><use href="#starSmall" x="855" y="112"/><use href="#starSmall" x="99" y="174"/>
+        <use href="#starSmall" x="246" y="215"/><use href="#starSmall" x="452" y="191"/><use href="#starSmall" x="607" y="241"/>
+        <animateTransform attributeName="transform" type="translate" values="0 0;0 360" dur="5s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(0 -360)">
+        <use href="#starSmall" x="55" y="20"/><use href="#starSmall" x="184" y="85"/><use href="#starSmall" x="298" y="33"/>
+        <use href="#starSmall" x="415" y="118"/><use href="#starSmall" x="536" y="45"/><use href="#starSmall" x="662" y="140"/>
+        <use href="#starSmall" x="785" y="29"/><use href="#starSmall" x="855" y="112"/><use href="#starSmall" x="99" y="174"/>
+        <use href="#starSmall" x="246" y="215"/><use href="#starSmall" x="452" y="191"/><use href="#starSmall" x="607" y="241"/>
+        <animateTransform attributeName="transform" type="translate" values="0 -360;0 0" dur="5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <g>
+      <use href="#starBig" x="135" y="65"/><use href="#starBig" x="350" y="145"/><use href="#starBig" x="580" y="82"/><use href="#starBig" x="820" y="205"/>
+      <animateTransform attributeName="transform" type="translate" values="0 -220;0 410" dur="3.2s" repeatCount="indefinite"/>
+    </g>
+
+    <g transform="translate(450 297)">
+      <animateTransform attributeName="transform" type="translate" values="450 297;385 282;500 300;430 290;450 297" dur="5.5s" repeatCount="indefinite"/>
+      <use href="#player"/>
+    </g>
+
+    <g fill="#59f7ff" stroke="#fff" stroke-width="1" filter="url(#cyanGlow)">
+      <g><rect x="445" y="258" width="5" height="20" rx="2"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -330" dur="1s" repeatCount="indefinite"/></g>
+      <g><rect x="455" y="258" width="5" height="20" rx="2"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -330" dur="1s" begin=".12s" repeatCount="indefinite"/></g>
+      <g><rect x="418" y="270" width="4" height="15" rx="2"/><animateTransform attributeName="transform" type="translate" values="0 0;50 -330" dur="1.15s" begin=".48s" repeatCount="indefinite"/></g>
+      <g><rect x="482" y="270" width="4" height="15" rx="2"/><animateTransform attributeName="transform" type="translate" values="0 0;-45 -330" dur="1.15s" begin=".66s" repeatCount="indefinite"/></g>
+    </g>
+
+    <g>
+      <g transform="translate(215 -30)">
+        <use href="#enemy"/>
+        <animateTransform attributeName="transform" type="translate" values="215 -30;245 95;200 205;235 390" dur="5.6s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(450 -30)">
+        <use href="#enemy"/>
+        <animateTransform attributeName="transform" type="translate" values="450 -45;390 70;505 155;430 385" dur="4.7s" begin="-.9s" repeatCount="indefinite"/>
+      </g>
+      <g transform="translate(700 -30)">
+        <use href="#enemy"/>
+        <animateTransform attributeName="transform" type="translate" values="700 -35;650 85;720 190;665 390" dur="5.2s" begin="-2.1s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <g fill="#ff4f7d" filter="url(#hotGlow)">
+      <circle cx="245" cy="90" r="4"><animate attributeName="cy" values="90;350" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="645" cy="105" r="4"><animate attributeName="cy" values="105;350" dur="2s" begin=".6s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <g transform="translate(450 106)" opacity="0">
+      <circle r="35" fill="url(#blast)"/>
+      <g stroke="#ffe96b" stroke-width="3">
+        <path d="M0-15V-33M0 15V33M-15 0H-33M15 0H33M-11-11-25-25M11 11 25 25M11-11 25-25M-11 11-25 25"/>
+      </g>
+      <animate attributeName="opacity" values="0;0;1;.7;0;0" keyTimes="0;.42;.46;.52;.58;1" dur="3.2s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="scale" additive="sum" values=".2;.2;1.2;.7;.2;.2" keyTimes="0;.42;.48;.56;.62;1" dur="3.2s" repeatCount="indefinite"/>
+    </g>
+
+    <g font-family="monospace" font-weight="700">
+      <text x="28" y="38" fill="#65f8ff" font-size="20" filter="url(#cyanGlow)">1UP  008420</text>
+      <text x="450" y="38" text-anchor="middle" fill="#ffe457" font-size="18">STAGE 03</text>
+      <text x="872" y="38" text-anchor="end" fill="#ff70b7" font-size="18">HIGH 099990</text>
+      <text x="28" y="334" fill="#fff" font-size="16">SHIELD</text>
+      <rect x="102" y="322" width="115" height="13" fill="none" stroke="#fff"/>
+      <rect x="105" y="325" width="82" height="7" fill="#39f3ae"><animate attributeName="width" values="82;82;48;75;82" dur="4s" repeatCount="indefinite"/></rect>
+      <text x="872" y="334" text-anchor="end" fill="#fff" font-size="16">× 03</text>
+    </g>
+
+    <rect width="900" height="360" fill="url(#scanlines)" pointer-events="none"/>
+  </g>
+  <rect x="8" y="8" width="884" height="344" rx="12" fill="none" stroke="#5968ff" stroke-width="3"/>
+  <rect x="13" y="13" width="874" height="334" rx="9" fill="none" stroke="#ff42a1" stroke-opacity="0.45"/>
+</svg>

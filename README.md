@@ -7,6 +7,9 @@
 
 - [agent-lightning](https://github.com/microsoft/agent-lightning)@_Maintainer_: The absolute trainer to light up AI agents.
 
+### Retro Space Battle
+
+![Retro 2D space battle animation](./assets/space-battle.svg)
 
 **Where to find me**
 
