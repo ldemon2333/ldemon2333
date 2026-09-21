@@ -10,6 +10,6 @@
 
 **Where to find me**
 
-- _email_: 2798457545@qq.com
+- _Email_: 2798457545@qq.com
 
-- _wechat_: 15968165921
+- _Wechat_: 15968165921
